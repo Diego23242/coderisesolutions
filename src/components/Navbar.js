@@ -18,31 +18,31 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'bg-white shadow-lg py-2' : 'bg-transparent py-4'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-3 sm:py-4'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 items-center">
+        <div className="flex justify-between h-14 sm:h-16 items-center">
           <div className="flex-shrink-0 flex items-center">
-            <span className={`text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text ${scrolled ? 'text-transparent' : 'text-transparent'}`}>
+            <span className={`text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent`}>
               Code Rise
             </span>
           </div>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-10">
-            <a href="#home" className={`px-3 py-2 text-sm font-medium transition-colors ${scrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-200'}`}>
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
+            <a href="#home" className={`px-2 sm:px-3 py-2 text-sm font-medium transition-colors ${scrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-200'}`}>
               Inicio
             </a>
-            <a href="#services" className={`px-3 py-2 text-sm font-medium transition-colors ${scrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-200'}`}>
+            <a href="#services" className={`px-2 sm:px-3 py-2 text-sm font-medium transition-colors ${scrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-200'}`}>
               Servicios
             </a>
-            <a href="#portfolio" className={`px-3 py-2 text-sm font-medium transition-colors ${scrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-200'}`}>
+            <a href="#portfolio" className={`px-2 sm:px-3 py-2 text-sm font-medium transition-colors ${scrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-200'}`}>
               Portafolio
             </a>
-            <a href="#contact" className={`px-3 py-2 text-sm font-medium transition-colors ${scrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-200'}`}>
+            <a href="#contact" className={`px-2 sm:px-3 py-2 text-sm font-medium transition-colors ${scrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-200'}`}>
               Contacto
             </a>
-            <button className={`bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:opacity-90 transition ${scrolled ? 'shadow-lg' : 'shadow-xl'}`}>
-              Cotizar proyecto
+            <button className={`bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-sm font-medium hover:opacity-90 transition ${scrolled ? 'shadow-md' : 'shadow-lg'}`}>
+              Cotizar
             </button>
           </div>
           
@@ -80,7 +80,7 @@ const Navbar = () => {
       
       {/* Mobile Navigation */}
       <div className={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
-        <div className="px-2 pt-2 pb-3 space-y-1 bg-white shadow-xl">
+        <div className="px-2 pt-2 pb-4 space-y-1 bg-white shadow-xl">
           <a
             href="#home"
             className="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-blue-600 hover:bg-gray-50"
@@ -109,7 +109,7 @@ const Navbar = () => {
           >
             Contacto
           </a>
-          <button className="w-full mt-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-3 rounded-md text-base font-medium">
+          <button className="w-full mt-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2.5 rounded-md text-base font-medium">
             Cotizar proyecto
           </button>
         </div>

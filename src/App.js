@@ -11,7 +11,7 @@ import Footer from './components/Footer';
 
 const App = () => {
   return (
-    <div className="font-sans text-gray-900 antialiased">
+    <div className="font-sans text-gray-900 antialiased overflow-x-hidden">
       <Navbar />
       <main>
         <HeroSection />
@@ -28,5 +28,3 @@ const App = () => {
 };
 
 export default App;
-
-// DONE

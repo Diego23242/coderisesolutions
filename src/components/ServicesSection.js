@@ -1,27 +1,17 @@
 import React from 'react';
 
-const ServiceCard = ({ title, description, icon, index }) => {
+const ServiceCard = ({ title, description, icon }) => {
   return (
-    <div className="relative group bg-white rounded-2xl shadow-xl overflow-hidden">
-      <div 
-        className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-        style={{ clipPath: 'circle(0% at 0% 0%)', transition: 'clip-path 0.7s ease-out' }}
-      ></div>
-      <div className="relative z-10 p-8 h-full">
+    <div className="relative bg-white rounded-2xl shadow-xl overflow-hidden">
+      <div className="p-8 h-full">
         <div className="flex items-center mb-6">
-          <div className="bg-blue-100 p-3 rounded-full group-hover:bg-white/20 group-hover:text-white transition-colors">
-            <div className="text-blue-600 group-hover:text-white transition-colors">
-              {icon}
-            </div>
+          <div className="bg-blue-100 p-3 rounded-full text-blue-600">
+            {icon}
           </div>
-          <h3 className="text-xl font-bold text-gray-800 ml-4 group-hover:text-white transition-colors">{title}</h3>
+          <h3 className="text-xl font-bold text-gray-800 ml-4">{title}</h3>
         </div>
-        <p className="text-gray-600 group-hover:text-white/90 transition-colors">{description}</p>
-        
-        <div className="mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <button className="text-sm font-semibold text-white border border-white/40 rounded-full px-4 py-2 hover:bg-white/10 transition">
-            Ver detalles
-          </button>
+        <p className="text-gray-600">{description}</p>
+        <div className="mt-6">
         </div>
       </div>
     </div>
@@ -69,7 +59,7 @@ const ServicesSection = () => {
             Soluciones digitales diseñadas para impulsar tu negocio al siguiente nivel
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <ServiceCard
@@ -77,7 +67,6 @@ const ServicesSection = () => {
               title={service.title}
               description={service.description}
               icon={service.icon}
-              index={index}
             />
           ))}
         </div>

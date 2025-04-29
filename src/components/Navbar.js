@@ -19,13 +19,13 @@ const Navbar = () => {
         <div className="flex justify-between h-14 sm:h-16 items-center">
           <div className="flex-shrink-0 flex items-center">
             <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Code Rise
+              Code Rise Solutions
             </span>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
-            {['home', 'services', 'portfolio', 'contact'].map((id) => (
+            {['Inicio', 'servicios', 'portafolio', 'contacto'].map((id) => (
               <a
                 key={id}
                 href={`#${id}`}

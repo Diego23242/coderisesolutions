@@ -13,6 +13,8 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const whatsappLink = "https://wa.me/523271090436?text=Hola,%20quiero%20saber%20más%20sobre%20los%20servicios%20de%20Code%20Rise%20Solutions.";
+
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 overflow-x-hidden ${scrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-3 sm:py-4'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -38,9 +40,14 @@ const Navbar = () => {
                 {id.charAt(0).toUpperCase() + id.slice(1)}
               </a>
             ))}
-            <button className={`bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-sm font-medium hover:opacity-90 transition ${scrolled ? 'shadow-md' : 'shadow-lg'}`}>
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-sm font-medium hover:opacity-90 transition ${scrolled ? 'shadow-md' : 'shadow-lg'}`}
+            >
               Cotizar
-            </button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -66,7 +73,7 @@ const Navbar = () => {
       {/* Mobile Navigation */}
       {isOpen && (
         <div className="md:hidden bg-white shadow-xl px-2 pt-2 pb-4 space-y-1">
-          {['home', 'services', 'portfolio', 'contact'].map((id) => (
+          {['inicio', 'servicios', 'portafolio', 'contacto'].map((id) => (
             <a
               key={id}
               href={`#${id}`}
@@ -76,9 +83,15 @@ const Navbar = () => {
               {id.charAt(0).toUpperCase() + id.slice(1)}
             </a>
           ))}
-          <button className="w-full mt-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2.5 rounded-md text-base font-medium">
+          <a
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full mt-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2.5 rounded-md text-base font-medium text-center"
+            onClick={() => setIsOpen(false)}
+          >
             Cotizar proyecto
-          </button>
+          </a>
         </div>
       )}
     </nav>

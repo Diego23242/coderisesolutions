@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
-              Code Rise
+              Code Rise Solutions
             </h3>
             <p className="text-gray-400">
               Soluciones digitales diseñadas para impulsar tu negocio y alcanzar tus objetivos.

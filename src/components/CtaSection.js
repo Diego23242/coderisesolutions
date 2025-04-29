@@ -1,6 +1,8 @@
 import React from 'react';
 
 const CtaSection = () => {
+  const whatsappLink = "https://wa.me/523271090436?text=Hola,%20quiero%20una%20cotización%20para%20una%20landing%20page%20profesional.";
+
   return (
     <section id="contact" className="py-20 bg-gradient-to-br from-blue-600 to-purple-700 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -9,12 +11,14 @@ const CtaSection = () => {
           Contáctanos hoy mismo y lleva tu negocio al siguiente nivel con una landing page profesional.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <button className="bg-white text-blue-600 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-all transform hover:scale-105">
+          <a
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white text-blue-600 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-all transform hover:scale-105"
+          >
             Solicitar cotización
-          </button>
-          <button className="border-2 border-white text-white font-bold py-3 px-8 rounded-full hover:bg-white hover:bg-opacity-10 transition-all transform hover:scale-105">
-            Hablar con un experto
-          </button>
+          </a>
         </div>
       </div>
     </section>

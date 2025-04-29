@@ -42,7 +42,6 @@ const TestimonialsSection = () => {
         <div className="relative max-w-3xl mx-auto">
           <div className="bg-white rounded-xl shadow-lg p-6 sm:p-8 relative">
             <div className="absolute -top-6 -left-6 bg-blue-600 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center text-white text-lg sm:text-xl">
-              "
             </div>
             <p className="text-base sm:text-lg text-gray-700 italic mb-4 sm:mb-6">
               {testimonials[activeIndex].quote}

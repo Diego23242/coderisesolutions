@@ -38,7 +38,7 @@ const TestimonialsSection = () => {
             Historias de éxito que nos inspiran
           </p>
         </div>
-        
+
         <div className="relative max-w-3xl mx-auto">
           <div className="bg-white rounded-xl shadow-lg p-8 relative">
             <div className="absolute -top-6 -left-6 bg-blue-600 w-12 h-12 rounded-full flex items-center justify-center text-white text-xl">
@@ -55,24 +55,27 @@ const TestimonialsSection = () => {
               </div>
             </div>
           </div>
-          
-          <button 
-            onClick={prevTestimonial}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-12 bg-white p-2 rounded-full shadow-md hover:bg-gray-100"
-          >
-            <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-          
-          <button 
-            onClick={nextTestimonial}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-12 bg-white p-2 rounded-full shadow-md hover:bg-gray-100"
-          >
-            <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
+
+          {/* Botones de navegación */}
+          <div className="flex justify-between mt-6 md:mt-0">
+            <button
+              onClick={prevTestimonial}
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 md:-translate-x-12 bg-white p-2 rounded-full shadow-md hover:bg-gray-100"
+            >
+              <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+
+            <button
+              onClick={nextTestimonial}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 md:translate-x-12 bg-white p-2 rounded-full shadow-md hover:bg-gray-100"
+            >
+              <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </section>

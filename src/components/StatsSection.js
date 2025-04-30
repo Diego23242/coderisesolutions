@@ -1,28 +1,70 @@
-import React from 'react';
+const PricingSection = () => {
+  const plans = [
+    {
+      title: "Básico",
+      price: "$2,500 MXN",
+      description: "Ideal para emprendedores que comienzan.",
+      features: [
+        "Landing page 100% personalizada",
+        "Diseño responsive",
+        "Formulario de contacto",
+        "Entrega en 5 días hábiles",
+      ],
+    },
+    {
+      title: "Profesional",
+      price: "$4,800 MXN",
+      description: "Perfecto para negocios que quieren escalar.",
+      features: [
+        "Todo lo del plan Básico",
+        "Optimización SEO inicial",
+        "Integración con WhatsApp o CRM",
+        "Analytics + pruebas de velocidad",
+        "Soporte 15 días post-lanzamiento",
+      ],
+    },
+    {
+      title: "Premium",
+      price: "$7,500 MXN",
+      description: "Para empresas que quieren resultados medibles.",
+      features: [
+        "Todo lo del plan Profesional",
+        "Texto publicitario optimizado (copywriting)",
+        "Hasta 3 secciones adicionales (servicios, proceso, etc.)",
+        "A/B Testing inicial",
+        "Consultoría personalizada 1 a 1",
+      ],
+    },
+  ];
 
-const StatItem = ({ number, label }) => {
   return (
-    <div className="text-center px-4 py-6 sm:px-6 sm:py-8 rounded-xl bg-white shadow-md hover:shadow-lg transition-shadow">
-      <span className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-        {number}+
-      </span>
-      <p className="mt-2 sm:mt-3 text-sm sm:text-base text-gray-600 font-medium">{label}</p>
-    </div>
-  );
-};
-
-const StatsSection = () => {
-  return (
-    <section className="py-16 sm:py-20 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-          <StatItem number="120" label="Proyectos Completados" />
-          <StatItem number="95" label="Clientes Satisfechos" />
-          <StatItem number="300" label="Tasas de Conversión Mejoradas" />
+    <section className="py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4 text-center">
+        <h2 className="text-3xl font-bold text-gray-800 mb-4">Planes y Precios</h2>
+        <p className="text-lg text-gray-600 mb-12">Escoge el plan que mejor se adapta a tus necesidades y objetivos.</p>
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {plans.map((plan, index) => (
+            <div key={index} className="border rounded-xl shadow p-6 hover:shadow-lg transition">
+              <h3 className="text-xl font-semibold text-blue-700 mb-2">{plan.title}</h3>
+              <p className="text-3xl font-bold text-gray-800 mb-4">{plan.price}</p>
+              <p className="text-gray-600 mb-6">{plan.description}</p>
+              <ul className="text-gray-700 text-left mb-6 space-y-2">
+                {plan.features.map((feature, i) => (
+                  <li key={i} className="flex items-start">
+                    <span className="text-blue-600 font-bold mr-2">✓</span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <button className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition">
+                Elegir Plan
+              </button>
+            </div>
+          ))}
         </div>
       </div>
     </section>
   );
 };
 
-export default StatsSection;
+export default PricingSection;
